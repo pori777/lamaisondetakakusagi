@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>フランスレストラン-La maison de Takakusagi/ラメゾンドタカクサギ </title>
+    <meta name="description" content="群馬県みどり市に店舗を構えるフレンチレストランです。自然にあふれた地で無垢の木のぬくもりと漆喰の壁の落ち着いた雰囲気の中でゆったりとした時間をお過ごしください。平日はもちろん土日祝日も行っているランチメニューからシェフのこだわりのディナーのコース料理までお客様のご予防にに沿ったお料理を心を込めてご用意いたします。">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <!-- ここからhome-->
+    <div id="homeSpace">
+        <div id="homeImage">
+            <header>
+                <div id="homeLogo">
+                    <div class="homeLogo1">
+                        <h3>La maison de</h3>
+                    </div>
+                    <div class="homeLogo2">
+                        <h3>Takakusagi</h3>
+                    </div>
+                </div>
+                <!--メニューバーの中身-->
+                <nav id="homeList">
+                    <ul>
+                        <li><a href="#homeSpace">HOME</a></li>
+                        <li><a href="#aboutSpace">ABOUT</a></li>
+                        <li><a href="#menuSpace">MENU</a></li>
+                        <li><a href="#quicheSpace">QUICHE</a></li>
+                        <li><a href="#accessSpace">ACCESS</a></li>
+                    </ul>
+                </nav>
 
+                <!--メニューバーのアイコン-->
+                <div id="homeList2">
+                    <span class="innerLine" id="line1"></span>
+                    <span class="innerLine" id="line2"></span>
+                    <span class="innerLine" id="line3"></span>
+                </div>
+            </header>
+            <script>
+                jQuery(function($) {
+            $('#homeImage').bgSwitcher({
+            images: ['laMaisonDeTakakusagiImage/IMG_3355.png','laMaisonDeTakakusagiImage/IMG_3256.png','laMaisonDeTakakusagiImage/IMG_3357.png','laMaisonDeTakakusagiImage/IMG_3264.png','laMaisonDeTakakusagiImage/IMG_3358.png'], // 切り替える背景画像
+            interval: 5000, // 背景画像を切り替える間隔 1000=1秒
+            loop: true, // 切り替えを繰り返すか true=繰り返す false=繰り返さない
+            shuffle: true, // 背景画像の順番をシャッフルするか true=する false=しない
+            effect: "fade", // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
+            duration: 2000, // エフェクトの時間 1000=1秒
+            easing: "swing" // エフェクトのイージングをlinear,swingから指定
+            });
+            });
+            </script>
+            <div class="concept">
+                <div class="concept1"><p>美味しいフレンチを</p></div>
+                <div class="concept2"><p>カジュアルに</p></div>
+            </div>
+        </div>
+    </div>
+<!--ここからabout------------------------------------------------------------------------------------------------------------------------------>    
+    <div id="aboutSpace">
+        <div class="aboutTitle fadeIn fadeInUp">
+            <p>ABOUT</p>
+        </div>
+        <div class="aboutText fadeIn fadeInLeft">
+            <p><span>LaMaisonDeTakakusagi/</span><span>ラメゾンドタカクサギは、</span><span>群馬県みどり市に店舗を構える</span><span>フレンチレストランです。</span>
+            <span>みどり市笠懸町の</span><span>自然にあふれた地で</span><span>無垢の木の温もりと</span><span>漆喰の壁の</span>
+            <span>落ち着いた雰囲気の中で</span><span>ゆったりとした時間をお過ごし下さい。</span>
+            <span>平日はもちろん</span><span>土日祝日も行っている</span><span>ランチメニューから</span>
+            <span>シェフの</span><span>こだわりの</span><span>ディナーの</span><span>コース料理まで</span><span>お客様の</span><span>ご希望に沿った</span><span>お料理を</span>
+            <span>心を込めてご用意いたします。</span>
+            </p>
+        </div>
+    </div>
+<!-- ここからmenu------------------------------------------------------------------------------------------------------------------------------->
+    <div id="menuSpace">
+        <div class="menuBackgroundImage fadeIn fadeInUp">
+            <div class="menuTitle fadeIn fadeInUp">
+                <p>MENU</p>
+            </div>
+            <div class="menuContents">
+                <div class="lunchTitle fadeIn fadeInLeft">
+                    <h1>Lunch</h1>
+                </div>
+                <div class="lunchMenuImage">
+                    <img src="laMaisonDeTakakusagiImage/lunchPlaisir.png" class="fadeIn fadeInLeft2">
+                    <img src="laMaisonDeTakakusagiImage/lunchLaMaison.png" class="fadeIn fadeInLeft2">
+                    <img src="laMaisonDeTakakusagiImage/genteiLunchMenu.png" class="fadeIn fadeInLeft2">
+                    <img src="laMaisonDeTakakusagiImage/lunchMenuDeLete.png" class="fadeIn fadeInLeft2">
+                    <img src="laMaisonDeTakakusagiImage/lunchMenuSpecial.png" class="fadeIn fadeInLeft2">
+                </div>
+                <div class="dinnerTitle fadeIn fadeInLeft">
+                    <h1>Dinner</h1>
+                </div>
+                <div class="dinnerMenuImage">
+                    <img src="laMaisonDeTakakusagiImage/dinnerLegere.png" class="fadeIn fadeInLeft2">                
+                    <img src="laMaisonDeTakakusagiImage/dinnerPlaisir.png" class="fadeIn fadeInLeft2">
+                    <img src="laMaisonDeTakakusagiImage/dinnerFamille.png" class="fadeIn fadeInLeft2">
+                    <img src="laMaisonDeTakakusagiImage/dinnerLaMaison.png" class="fadeIn fadeInLeft2">
+                    <img src="laMaisonDeTakakusagiImage/dinnerGrande.png" class="fadeIn fadeInLeft2">
+                </div>
+            </div>
+            <div class="menuDetailsTitle fadeIn fadeInLeft">
+                <h1>Precautions</h1>
+            </div>
+            <div class="menuDetailsIphone fadeIn fadeInLeft2 ">
+                <img src="laMaisonDeTakakusagiImage/menuDetailsIphone.png">
+            </div>            
+        </div>
+    </div>
+</div>
+
+
+<div id="quicheSpace">
+    <div class="quicheTitle fadeIn fadeInUp">
+        <p>Quiche</p>
+    </div>
+        <div class="quicheImage fadeIn fadeInLeft">
+            <img src="laMaisonDeTakakusagiImage/IMG_3354.png">
+        </div>
+    <div class="quicheBackground">
+        <div id="quicheContents">
+            <div class="quicheContents1 fadeIn fadeInLeft">
+                <h3>キッシュの販売をしております。<br>
+                全粒粉を使い季節の野菜をふんだんに<br>
+                使用した自慢のキッシュです。<br>
+                テイクアウトは消費税8%となります。</h3>
+            </div>
+            <div class="quicheContents2 fadeIn fadeInLeft">
+                <h4>1ホール&nbsp￥2,300<br>
+                1/2ホール&nbsp￥1,400<br>
+                1/4ホール&nbsp￥750<br>
+                ミニサイズ&nbsp￥400～</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ここからaccess-->
+<div id="accessSpace">
+    <div class="accessTitle fadeIn fadeInUp">
+        <p>ACCESS</p>
+    </div>
+    <div class="accessBackground">
+    <div class="accessMapImage fadeIn fadeInLeft">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51385.89251208074!2d139.28256859339598!3d36.394233728369436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffa5369e4e86fe54!2z44Op44O744Oh44K-44Oz44O744OJ44O744K_44Kr44Kv44K144Ku!5e0!3m2!1sja!2sjp!41624544882744!5m2!1sja!2sjp" width="500px;" height="300px"></iframe>
+    </div>
+    <div class="accessMapImage2 fadeIn fadeInLeft">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51385.89251208074!2d139.28256859339598!3d36.394233728369436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffa5369e4e86fe54!2z44Op44O744Oh44K-44Oz44O744OJ44O744K_44Kr44Kv44K144Ku!5e0!3m2!1sja!2sjp!41624544882744!5m2!1sja!2sjp" width="75%" height="220px"></iframe>
+    </div>
+    
+    <div class="accessInformation fadeIn fadeInLeft2">
+        <h4>TEL: 0277-46-6973<br>
+        〒379-2312<br>
+        群馬県みどり市笠懸町久宮
+        370－1<br>
+        ランチ: 11:30 ~ 14:00<br>
+        ディナー: 17:30 ~ 20:00<br>
+        定休日: 月曜日</h4>
+    </div>
+</div>
+</div>
+<!-- ここからfooter-->
+    <div id="footer">
+        <div class="footerLogo">
+            <div class="footerLogo1">
+                <h5>La maison de</h5>
+            </div>
+            <div class="footerLogo2">
+                <h5>Takakusagi</h5>
+            </div>   
+        </div>        
+            <div class="copyright">
+                <h5>© 2021 pori</h5>
+            </div>
+    </div>
+    <script src="jquery.bgswitcher.js"></script>
+    <script src ="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,787 @@
+@charset "utf-8";
+
+
+    
+li {
+    list-style: none;
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: serif;
+}
+
+/* スクロールCSS */
+.fadeIn {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+}
+
+.fadeInUp {
+    transform: translate(0, 50px);
+}
+
+.fadeInDown {
+    transform: translate(0, -50px);
+}
+
+.fadeInLeft {
+    transform: translate(-50px, 0);
+}
+
+.fadeInLeft2 {
+    transform: translate(-50px, 0);
+    transition:2s;
+}
+
+.fadeInLeft3 {
+    transform: translate(-50px, 0);
+    transition:4s;
+}
+.fadeInRight {
+    transform: translate(50px, 0);
+}
+
+.scrollIn {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/*ここからHOME*/
+
+header {
+    width: 100%; /* 幅いっぱいを指定 */
+    height: 50px; /* 高さを50pxに指定 */
+    padding: 30px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    z-index:100;
+}
+
+#homeLogo {
+    float:left;
+    color:white;
+    font-size: 20px;
+    line-height: 27px;
+    text-shadow: 2px 2px 0px black;
+}
+
+
+#homeList {
+    text-align: left;
+    position: absolute;
+    height: 100vh; 
+    width: 15%;   
+    right: -15%;
+    top: 0;
+    background:salmon;
+    transition: .7s;
+}
+
+#homeList ul {
+    padding-top: 80px;
+}
+
+#homeList ul li {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#homeList a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    margin: 0 15px;
+    padding: 10px;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#homeList a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color:black;
+    transform: translate(-100%, 0);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+    content: "";
+}
+
+#homeList a:hover::after {
+    transform: translate(0, 0);
+}
+
+#homeList2 {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 50px;
+    height: 44px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+/*メニューバーアイコン*/
+.innerLine {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    transition: 1s;
+    border-radius: 4px;
+    background-color:black;
+}
+
+#line1 {
+    top: 0;
+}
+#line2 {
+    top: 20px;
+}
+#line3 {
+    bottom: 0px;
+}
+/*メニューバーを押したときに表が右から出る動き*/
+.in{
+    transform: translateX(-100%);
+    }
+
+/*メニューバーを押したときのバツ印*/
+.line_1,.line_2,.line_3{
+    background:black;
+}
+
+/*menuバーの動き*/
+.line_1 {
+    transform: translateY(20px) rotate(-45deg);
+    top: 0;
+    background: black;
+}
+
+.line_2 {
+    opacity: 0;
+}  
+.line_3 {
+    transform: translateY(-20px) rotate(45deg);
+    bottom: 0;
+    background: black;
+}
+
+.concept {
+    color:white;
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 2px 2px 0px #000000;
+    line-height:100px;
+}
+
+
+#homeImage{
+    margin:0;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*ここからabout-----------------------------------------------------------------------------------------------------------------------------*/
+.aboutTitle {
+    text-align: center;
+    font-size: 100px;
+    color:black;
+}
+
+.aboutText {
+    text-align: center;
+    font-size: 20px;
+    margin:50px 200px;
+}
+
+.aboutText span {
+    display: inline-block;
+}
+
+/*ここからMENU-----------------------------------------------------------------------------------------------------------------------------*/
+
+.menuTitle {
+    text-align: center;
+    font-size: 100px;
+    color:white;
+}
+
+
+
+.menuBackgroundImage{
+    background-image: url("https://cdn.pixabay.com/photo/2014/12/25/23/12/woodgrain-580111_1280.jpg");
+    background-repeat:repeat;
+    background-position: center;
+    position:relative;
+    z-index: 10;
+}
+/*https://cdn.pixabay.com/photo/2014/12/25/23/12/woodgrain-580111_1280.jpg*/
+
+.lunchTitle {
+    text-align: center;
+    font-size:30px;
+    color:white;
+    margin-top: 50px;
+}
+
+.lunchMenuImage {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content:center;
+}
+
+.lunchMenuImage img {
+    width:20%;
+    margin:40px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.dinnerTitle {
+    text-align: center;
+    font-size:30px;
+    color:white;
+    margin-top: 50px;
+}
+
+.dinnerMenuImage {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content:center;
+}
+
+.dinnerMenuImage img {
+    width:20%;
+    margin:40px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.menuDetailsTitle {
+    text-align: center;
+    font-size: 30px;
+    color:white;
+    margin-top:50px;
+}
+
+.menuDetailsIphone {
+    text-align:center;
+}
+
+.menuDetailsIphone img{
+    margin: 40px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+/*ここからquiche---------------------------------------------------------------------------------------------------------------------------*/
+
+.quicheTitle {
+    text-align: center;
+    font-size: 100px;
+    color:black;
+    padding-bottom: 25px;
+}
+
+.quicheBackground {
+    background-color:teal;
+    z-index: 1;
+}
+.quicheImage {
+    float:left;
+    z-index: 2;
+    padding-left:100px;
+}
+
+.quicheImage img {
+    width:600px;
+    height:400px;
+}
+
+#quicheContents {
+    margin:50px 0px;
+    color:white;
+    text-align: center;
+}
+
+.quicheContents1 {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.quicheContents2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+
+/*ここからACCESS--------------------------------------------------------------*/
+
+.accessTitle {
+    text-align: center;
+    font-size: 100px;
+    color:black;
+    padding-bottom: 25px;
+}
+
+
+.accessMapImage {
+    text-align: center;
+}
+
+.accessMapImage2 {
+    display:none;
+}
+
+.accessInformation {
+    margin:50px 0px;
+    color:black;
+    text-align: center;
+    font-size: 20px;
+    padding:10px 0px;
+}
+
+/*ここからfooter------------------------------------------------------*/
+#footer {
+    height:100px;
+    text-align: center;
+    background-color: teal;
+}
+
+.footerLogo {
+    line-height: 15px;
+    padding-top: 20px;
+}
+
+.copyright {
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    
+    #homeLogo {
+        text-shadow: 1px 1px 0px black;
+    }
+    /*ここからquiche---------------------------------------------------------------------------------------------------------------------------*/
+    
+.quicheImage img {
+    width:400px;
+    height:270px;
+    padding-top: 35px;
+}
+
+.quicheContents1 {
+    font-size: 15px;
+}
+
+.quicheContents2 {
+    font-size: 15px;
+}
+
+.menuDetailsIphone img {
+    width:250px;
+    height:350px;
+}
+}
+
+
+@media screen and (max-width: 930px) {
+    #homeLogo {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .concept {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .aboutTitle {
+        font-size: 50px;
+    }
+
+    .aboutText {
+        font-size:15px;
+    }
+
+    .menuTitle {
+        font-size:50px;
+    }
+
+    .lunchTitle {
+        font-size:15px;
+    }
+
+    .dinnerTitle {
+        font-size: 15px;
+    }
+
+    .menuDetailsTitle {
+        font-size:15px;
+    }
+
+    .quicheTitle {
+        font-size: 50px;
+    }
+
+    .quicheImage {
+        padding-left: 50px;
+    }
+    .quicheContents1 {
+        font-size:15px;
+    }
+
+    .quicheContents2 {
+        font-size:15px;
+    }
+
+    .accessTitle {
+        font-size:50px;
+    
+}
+
+    .accessInformation {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 770px) {
+    #homeList {
+        width: 20%;   
+        right: -20%;
+    }
+    .aboutText {
+        margin:30px 150px;
+    }
+    
+    .quicheImage {
+        padding-left: 35px;
+    }
+    .quicheImage img{
+        width:350px;
+        height:233px;
+    }
+
+    .quicheContents1 {
+        font-size: 12px;
+    }
+
+    .quicheContents2 {
+        font-size: 12px;
+    }
+
+    .accessMapImage {
+        display: none;
+    }
+
+    .accessMapImage2 {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        padding-top:40px;
+    }
+}
+
+
+@media screen and (max-width:640px) {
+    #homeLogo {
+        font-size: 12px;
+    }
+
+    .concept {
+        font-size: 35px;
+    }
+
+    .aboutText {
+        font-size: 13px   
+    }
+
+    .quicheContents1 {
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 15px 15px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    }
+    
+    #homeLogo {
+        font-size: 10px;
+    }
+    
+    #homeList {
+        width: 30%;   
+        right: -30%;
+    }
+    
+    #homeList ul li {
+        font-size: 16px;
+    }
+    
+
+    .aboutTitle {
+        font-size: 40px;
+    }
+
+    .aboutText {
+        margin:20px 50px;
+        font-size: 13px;
+    }
+
+    .menuTitle {
+        font-size:40px;
+    }
+    
+    .lunchTitle {
+        font-size:15px;
+    }
+    
+    .lunchMenuImage img {
+        width:60%;
+        margin:20px;
+    }
+    
+    .dinnerTitle {
+        font-size:15px;
+    }
+    
+    .dinnerMenuImage img {
+        width:60%;
+        margin:20px;
+    }
+
+    .menuDetailsTitle {
+        font-size:15px;
+    }
+    
+    /*ここからquiche---------------------------------------------------------------------------------------------------------------------------*/
+    .quicheImage {
+        float:left;
+        text-align: center;
+    }
+
+    .quicheImage img {
+        width:240px;
+        height:200px;
+    }
+    
+    .quicheContents1 {
+        font-size: 9px;
+        margin:2px;
+    }
+    
+    .quicheContents2 {
+        font-size: 10px;
+        padding-top: 2px;
+    }
+
+    /*ここからACCESS--------------------------------------------------------------*/
+
+    
+    .accessTitle {
+        font-size: 40px;
+    }
+    
+    .accessMapImage {
+        display:none;
+    }
+
+    .accessMapImage2 {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+    }
+        
+    .accessInformation  {
+        font-size: 15px;
+    }
+
+    /*ここからfooter------------------------------------------------------*/
+    .footerLogo {
+        line-height: 12px;
+        font-size: 10px;
+    }
+
+    .copyright {
+        padding-top: 5px;
+        font-size: 8px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:550px) {
+
+    
+    
+}
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 430px) {
+
+    .quicheImage {
+        padding-top: 8px;
+        padding-left: 20px;
+    }
+    .quicheImage img {
+        width:190px;
+        height:190px;
+    }
+
+    .quicheContents1 {
+        font-size: px;
+    }
+
+    .quicheContents2 {
+        font-size: px;
+    }
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 390px){
+    .quicheImage {
+        padding-top: 10px;
+    }
+
+    .quicheImage img {
+        width:160px;
+        height:180px;
+    }
+}
